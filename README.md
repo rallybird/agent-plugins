@@ -49,7 +49,7 @@ tab so you can sign in and choose a workspace. There is no API key to copy.
 3. Select Rallybird and pick where to install it.
 
 Or upload the plugin directly: download
-[rallybird.zip](https://github.com/rallybird/agent-plugins/releases/latest/download/rallybird.zip),
+[rallybird-claude.zip](https://github.com/rallybird/agent-plugins/releases/latest/download/rallybird-claude.zip),
 open **Settings → Plugins**, choose **+ Add → Upload plugin** and select the
 file. Uploaded plugins don't update themselves; download the latest zip to
 upgrade.

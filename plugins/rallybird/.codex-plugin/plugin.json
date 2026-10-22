@@ -29,6 +29,9 @@
     "longDescription": "Find the strongest advocates for your next reference call. Find the best case studies, quotes and metrics for your next case study, slide deck, or sales call.",
     "developerName": "Rallybird",
     "category": "Research",
+    "capabilities": [
+      "Read"
+    ],
     "websiteURL": "https://rallybird.ai",
     "privacyPolicyURL": "https://rallybird.ai/privacy",
     "termsOfServiceURL": "https://rallybird.ai/terms",
