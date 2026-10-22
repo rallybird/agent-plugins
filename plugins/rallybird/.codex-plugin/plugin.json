@@ -1,0 +1,37 @@
+{
+  "name": "rallybird",
+  "version": "0.1.0",
+  "description": "Use Rallybird to find your strongest advocates and your best customer proof, with Codex.",
+  "author": {
+    "name": "Rallybird",
+    "url": "https://rallybird.ai"
+  },
+  "homepage": "https://rallybird.ai",
+  "license": "MIT",
+  "keywords": [
+    "reference",
+    "reference-call",
+    "advocates",
+    "champions",
+    "user voice",
+    "reviews",
+    "metrics",
+    "quotes",
+    "customer-proof",
+    "case-studies"
+  ],
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json",
+  "interface": {
+    "displayName": "Rallybird",
+    "shortDescription": "Find your strongest advocates and your best customer proof",
+    "longDescription": "Find the strongest advocates for your next reference call. Find the best case studies, quotes and metrics for your next case study, slide deck, or sales call.",
+    "developerName": "Rallybird",
+    "category": "Research",
+    "websiteURL": "https://rallybird.ai",
+    "privacyPolicyURL": "https://rallybird.ai/privacy",
+    "termsOfServiceURL": "https://rallybird.ai/terms",
+    "composerIcon": "./assets/icon.png",
+    "logo": "./assets/icon.png"
+  }
+}

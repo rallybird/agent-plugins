@@ -1,0 +1,27 @@
+{
+  "name": "rallybird",
+  "version": "0.1.0",
+  "description": "Use Rallybird to find your strongest advocates and your best customer proof, with Claude.",
+  "author": {
+    "name": "Rallybird",
+    "url": "https://rallybird.ai"
+  },
+  "homepage": "https://rallybird.ai",
+  "license": "MIT",
+  "keywords": [
+    "rallybird",
+    "reference",
+    "reference-call",
+    "advocates",
+    "champions",
+    "user voice",
+    "reviews",
+    "metrics",
+    "quotes",
+    "customer-proof",
+    "case-studies"
+  ],
+  "privacyPolicyUrl": "https://rallybird.ai/privacy",
+  "termsOfServiceUrl": "https://rallybird.ai/terms",
+  "icon": "./assets/icon.png"
+}

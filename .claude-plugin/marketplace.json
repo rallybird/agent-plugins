@@ -1,0 +1,16 @@
+{
+  "name": "rallybird",
+  "owner": {
+    "name": "Rallybird",
+    "url": "https://rallybird.ai"
+  },
+  "plugins": [
+    {
+      "name": "rallybird",
+      "source": "./plugins/rallybird",
+      "description": "Search Rallybird's evidence-backed graph of customer proof (case studies, quotes, metrics, reviews) from Claude Code.",
+      "category": "research"
+    }
+  ],
+  "description": "Rallybird plugins for Claude Code: find the customer proof you need from your coding agent."
+}

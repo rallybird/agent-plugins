@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "rallybird": {
+      "type": "http",
+      "url": "https://app.rallybird.ai/mcp"
+    }
+  }
+}
