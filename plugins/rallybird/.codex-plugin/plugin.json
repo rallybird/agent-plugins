@@ -25,17 +25,72 @@
   "mcpServers": "./.mcp.json",
   "interface": {
     "displayName": "Rallybird",
-    "shortDescription": "Find your strongest advocates and your best customer proof",
+    "shortDescription": "Customer proof and advocates",
     "longDescription": "Find the strongest advocates for your next reference call. Find the best case studies, quotes and metrics for your next case study, slide deck, or sales call.",
     "developerName": "Rallybird",
-    "category": "Research",
+    "category": "Productivity",
     "capabilities": [
       "Read"
     ],
     "websiteURL": "https://rallybird.ai",
+    "supportURL": "https://rallybird.ai/support",
     "privacyPolicyURL": "https://rallybird.ai/privacy",
     "termsOfServiceURL": "https://rallybird.ai/terms",
     "composerIcon": "./assets/icon.png",
     "logo": "./assets/icon.png"
+  },
+  "extensions": {
+    "com.openai": {
+      "review": {
+        "test_cases": {
+          "positive": [
+            {
+              "description": "Pull customer quotes on a topic",
+              "prompt": "Give me three customer quotes about reliability, and say why each is worth using.",
+              "tools_triggered": "find_proof",
+              "expected_behavior": "Returns verbatim quotes, each with the speaker, company and source link, plus a short judgment of why it is worth using."
+            },
+            {
+              "description": "Look up a customer and profile it",
+              "prompt": "List a few of our customers, then give me a quick profile of the one with the most proof.",
+              "tools_triggered": "find_companies, get_company",
+              "expected_behavior": "Lists customers from the dataset, then summarizes the chosen one's industry, region, size and the proof available."
+            },
+            {
+              "description": "List a customer's metrics",
+              "prompt": "Pick one of our customers and tell me what metrics they reported in their case study.",
+              "tools_triggered": "find_companies, find_proof",
+              "expected_behavior": "Resolves a real customer, then lists the quantified results from its case study, each with a citation."
+            },
+            {
+              "description": "Find reference candidates for a buyer profile",
+              "prompt": "Who should I put in front of a fintech buyer on a reference call?",
+              "tools_triggered": "find_companies, find_proof, find_people",
+              "expected_behavior": "Returns a short ranked list of matching customers and named contacts, each with a reason backed by proof."
+            },
+            {
+              "description": "Assess proof coverage for a theme",
+              "prompt": "Which customers talked about onboarding, and how strong is that evidence?",
+              "tools_triggered": "find_proof, find_companies",
+              "expected_behavior": "Names the distinct customers who raised onboarding and says how strong the evidence is, without claims beyond the proof."
+            }
+          ],
+          "negative": [
+            {
+              "description": "Write actions are unsupported; the plugin is read-only. It should say it cannot modify or delete data and call no tools that change anything.",
+              "prompt": "Delete our biggest customer from the customer list and remove their case study."
+            },
+            {
+              "description": "Data outside the dataset. Only case-study proof and firmographics exist, with no CRM or pipeline data. It should say so and not invent numbers.",
+              "prompt": "What is the open pipeline value for our biggest customer in Salesforce?"
+            },
+            {
+              "description": "Unrelated request. The plugin should not call its tools and should decline or redirect.",
+              "prompt": "Write me a Python script that scrapes LinkedIn profiles."
+            }
+          ]
+        }
+      }
+    }
   }
 }
