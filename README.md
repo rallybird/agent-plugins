@@ -18,6 +18,9 @@ This repository packages Rallybird plugins for
 [OpenAI Codex](https://developers.openai.com/codex). Installing the plugin
 connects your agent to Rallybird and adds skills for common jobs.
 
+Documentation:
+[rallybird.github.io/agent-plugins](https://rallybird.github.io/agent-plugins/).
+
 ## Example questions
 
 There are many questions that Rallybird can answer, but here are a few examples:
