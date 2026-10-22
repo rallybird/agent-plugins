@@ -1,0 +1,75 @@
+---
+// Starlight's footer (edit link, pagination) plus a brand strip like the one on
+// rallybird.ai.
+import Default from "@astrojs/starlight/components/Footer.astro";
+import logo from "../assets/logo.svg";
+import logoDark from "../assets/logo-dark.svg";
+
+const year = new Date().getFullYear();
+---
+
+<Default {...Astro.props}><slot /></Default>
+
+<div class="brand-footer">
+  <a class="brand" href="https://rallybird.ai" aria-label="Rallybird home">
+    <img class="light" src={logo.src} alt="Rallybird" width="105" height="22" />
+    <img class="dark" src={logoDark.src} alt="Rallybird" width="105" height="22" />
+  </a>
+  <span class="tagline">The context layer for customer marketers</span>
+  <div class="meta">
+    <nav class="links" aria-label="Footer">
+      <a href="https://rallybird.ai/support">Support</a>
+      <a href="https://rallybird.ai/terms">Terms</a>
+      <a href="https://rallybird.ai/privacy">Privacy</a>
+      <a href="https://github.com/rallybird/agent-plugins">GitHub</a>
+    </nav>
+    <span class="copy">© {year}</span>
+  </div>
+</div>
+
+<style>
+  .brand-footer {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 12px 32px;
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--sl-color-hairline);
+    color: var(--sl-color-gray-3);
+    font: 600 11px/1.4 "IBM Plex Mono", ui-monospace, monospace;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+  .brand img {
+    height: 1.3rem;
+    width: auto;
+    display: block;
+  }
+  :global(:root[data-theme="light"]) .dark,
+  :global(:root[data-theme="dark"]) .light {
+    display: none;
+  }
+  .meta {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    margin-inline-start: auto;
+  }
+  .links {
+    display: flex;
+    gap: 20px;
+  }
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+  .links a:hover {
+    color: var(--sl-color-text-accent);
+  }
+  .copy::before {
+    content: "•";
+    color: #f28a50;
+    margin-right: 12px;
+  }
+</style>

@@ -1,0 +1,159 @@
+/* Rallybird brand, mirrored from rallybird.ai: Inter body, Instrument Serif
+   display, ink #272223, navy #102542, coral #fb6a53, 5px radii. */
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url("../assets/fonts/inter-latin-variable.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Instrument Serif";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../assets/fonts/instrument-serif-latin-400.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "IBM Plex Mono";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("../assets/fonts/ibm-plex-mono-latin-600.woff2") format("woff2");
+}
+
+:root {
+  --sl-font: "Inter", system-ui, sans-serif;
+  --rb-display: "Instrument Serif", Georgia, serif;
+  --rb-coral: #fb6a53;
+  --rb-radius: 5px;
+}
+
+:root[data-theme="light"] {
+  --sl-color-white: #272223;
+  --sl-color-gray-1: #272223;
+  --sl-color-gray-2: #3d3738;
+  --sl-color-gray-3: #625d5b;
+  --sl-color-gray-4: #8a8583;
+  --sl-color-gray-5: #e4e1dc;
+  --sl-color-gray-6: #f4f4ef;
+  --sl-color-gray-7: #fbfaf6;
+  --sl-color-black: #ffffff;
+  --sl-color-bg-nav: #fbfaf6;
+  --sl-color-hairline: #e4e1dc;
+  --sl-color-accent-low: #fde7e2;
+  --sl-color-accent: #c2412b;
+  --sl-color-accent-high: #8a2a1a;
+  --sl-color-text-accent: #c2412b;
+}
+
+:root[data-theme="dark"] {
+  --sl-color-white: #fffef2;
+  --sl-color-gray-1: #e4e1dc;
+  --sl-color-gray-2: #c5c1bc;
+  --sl-color-gray-3: #9a9692;
+  --sl-color-gray-4: #6b7a8e;
+  --sl-color-gray-5: #243a58;
+  --sl-color-gray-6: #14294a;
+  --sl-color-gray-7: #0e1f38;
+  --sl-color-black: #0b1727;
+  --sl-color-bg-nav: #0e1f38;
+  --sl-color-hairline: #243a58;
+  --sl-color-accent-low: #3a1a14;
+  --sl-color-accent: #fb6a53;
+  --sl-color-accent-high: #fdb4a7;
+  --sl-color-text-accent: #fb6a53;
+}
+
+/* Wordmark: sized like a nav logo, not the full header height. */
+.site-title img {
+  height: 1.3rem;
+  width: auto;
+}
+
+h1,
+h2,
+.sl-markdown-content h2 {
+  font-family: var(--rb-display);
+  font-weight: 400;
+  letter-spacing: -0.02em;
+}
+h1 {
+  font-size: clamp(2.25rem, 4vw, 3rem);
+  line-height: 1.05;
+}
+.sl-markdown-content h2 {
+  font-size: 2rem;
+  line-height: 1.15;
+}
+.hero h1 {
+  font-size: clamp(3rem, 7vw, 5rem);
+  line-height: 0.95;
+  letter-spacing: -0.025em;
+}
+
+/* Coral action buttons with ink text, as on rallybird.ai. */
+.sl-link-button.primary {
+  background: var(--rb-coral);
+  border-color: var(--rb-coral);
+  color: #272223;
+  font-weight: 600;
+}
+.sl-link-button.primary:hover {
+  background: #fc8370;
+  border-color: #fc8370;
+}
+.sl-link-button {
+  border-radius: var(--rb-radius);
+}
+
+pre,
+code,
+.card,
+.starlight-aside,
+.sl-markdown-content table,
+.pagefind-ui__search-input,
+site-search button {
+  border-radius: var(--rb-radius);
+}
+.card {
+  background: var(--sl-color-gray-7);
+}
+
+/* Utility headings stay sans; only page headings use the display serif. */
+starlight-toc h2,
+.right-sidebar h2 {
+  font-family: var(--sl-font);
+  font-size: var(--sl-text-xs);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+.sidebar-content a[aria-current="page"] {
+  background: var(--sl-color-accent-low);
+  color: var(--sl-color-white);
+  font-weight: 600;
+  border-radius: var(--rb-radius);
+}
+
+/* Homepage cards: stretch each card's one link over the whole card. */
+.card {
+  position: relative;
+  transition: border-color 0.15s;
+}
+.card:hover {
+  border-color: var(--sl-color-text-accent);
+}
+.card a::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+}
+
+/* Homepage rhythm: tighter hero, more air before the cards. */
+.hero {
+  padding-block: clamp(1.5rem, 4vmin, 3rem) clamp(0.5rem, 1.5vmin, 1rem);
+}
+.sl-markdown-content .card-grid {
+  margin-top: 3.5rem;
+}

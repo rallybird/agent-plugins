@@ -1,0 +1,75 @@
+---
+// Starlight's header with the logo linking to rallybird.ai, a "Docs" link to
+// this site's home beside it, and the search box moved to the right, next to
+// the theme and GitHub controls.
+import Search from "@astrojs/starlight/components/Search.astro";
+import SocialIcons from "@astrojs/starlight/components/SocialIcons.astro";
+import ThemeSelect from "@astrojs/starlight/components/ThemeSelect.astro";
+import logo from "../assets/logo.svg";
+import logoDark from "../assets/logo-dark.svg";
+---
+
+<div class="header">
+  <div class="left sl-flex">
+    <a class="logo" href="https://rallybird.ai" aria-label="Rallybird home">
+      <img class="light" src={logo.src} alt="Rallybird" width="95" height="20" />
+      <img class="dark" src={logoDark.src} alt="Rallybird" width="95" height="20" />
+    </a>
+    <a class="home-link" href={import.meta.env.BASE_URL.replace(/\/?$/, "/")}>Docs</a>
+  </div>
+  <div class="right sl-flex print:hidden">
+    <Search />
+    <div class="sl-hidden md:sl-flex right-group">
+      <div class="sl-flex social-icons">
+        <SocialIcons />
+      </div>
+      <ThemeSelect />
+    </div>
+  </div>
+</div>
+
+<style>
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--sl-nav-gap);
+    height: 100%;
+  }
+  .left,
+  .right,
+  .right-group,
+  .social-icons {
+    align-items: center;
+    gap: 1rem;
+  }
+  .right {
+    margin-inline-start: auto;
+  }
+  .logo img {
+    height: 1.3rem;
+    width: auto;
+    display: block;
+  }
+  :global(:root[data-theme="light"]) .dark,
+  :global(:root[data-theme="dark"]) .light {
+    display: none;
+  }
+  .home-link {
+    color: var(--sl-color-gray-3);
+    font-size: var(--sl-text-sm);
+    font-weight: 500;
+    text-decoration: none;
+    padding-inline-start: 1rem;
+    border-inline-start: 1px solid var(--sl-color-gray-5);
+    white-space: nowrap;
+  }
+  .home-link:hover {
+    color: var(--sl-color-text-accent);
+  }
+  .social-icons::after {
+    content: "";
+    height: 2rem;
+    border-inline-end: 1px solid var(--sl-color-gray-5);
+  }
+</style>

@@ -1,0 +1,41 @@
+---
+title: Rallybird for Claude and Codex
+description: Your best customer proof, inside your agent.
+template: splash
+prev: false
+next: false
+hero:
+  tagline: Rallybird collects your case studies, quotes, metrics and reviews, and makes them available where you work. Every claim links back to its source, so you can check it before you repeat it.
+  actions:
+    - text: Install the plugin
+      link: install/
+      icon: right-arrow
+    - text: Connect the MCP server
+      link: mcp-server/
+      variant: minimal
+---
+
+import { Card, CardGrid } from "@astrojs/starlight/components";
+
+## Ask things like
+
+- "Who can I put in front of a fintech buyer worried about reliability?"
+- "Give me three quotes about onboarding from enterprise customers."
+- "Do we have strong proof for developer productivity? Which customers raised
+  it?"
+- "Tell me about Acme: who we worked with there and what they said."
+
+<CardGrid>
+  <Card title="Plugin" icon="puzzle">
+    Connect Rallybird to Claude or Codex and add skills for common jobs. See [Install](install/).
+  </Card>
+  <Card title="MCP server" icon="rocket">
+    Any client that supports remote MCP servers with OAuth can connect. See [MCP server](mcp-server/).
+  </Card>
+  <Card title="Tools" icon="magnifier">
+    Six read-only tools to search proof, look up customers and people, and read full sources. See [Tools](tools/).
+  </Card>
+  <Card title="Skills" icon="star">
+    Find a reference, pull quotes, check proof coverage and brief yourself on an account. See [Skills](skills/).
+  </Card>
+</CardGrid>
