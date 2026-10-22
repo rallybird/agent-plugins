@@ -7,6 +7,7 @@
     "url": "https://rallybird.ai"
   },
   "homepage": "https://rallybird.ai",
+  "repository": "https://github.com/rallybird/agent-plugins",
   "license": "MIT",
   "keywords": [
     "rallybird",
