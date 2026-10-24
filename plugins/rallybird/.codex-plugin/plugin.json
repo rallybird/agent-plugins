@@ -1,7 +1,7 @@
 {
   "name": "rallybird",
   "version": "0.1.0",
-  "description": "Use Rallybird to find your strongest advocates and your best customer proof, with Codex.",
+  "description": "Search your company's published customer proof (case studies, quotes, metrics and reference customers) from Codex.",
   "author": {
     "name": "Rallybird",
     "url": "https://rallybird.ai"
@@ -25,10 +25,10 @@
   "mcpServers": "./.mcp.json",
   "interface": {
     "displayName": "Rallybird",
-    "shortDescription": "Customer proof and advocates",
-    "longDescription": "Find the strongest advocates for your next reference call. Find the best case studies, quotes and metrics for your next case study, slide deck, or sales call.",
+    "shortDescription": "Customer proof and references",
+    "longDescription": "Rallybird turns the customer proof on your company's website (case studies, customer stories, and G2 reviews) into a searchable library you can query from Codex.\n\nAsk for verbatim customer quotes on a topic, the metrics a customer reported, a profile of a customer and the people quoted in its stories, or the best reference customers for a buyer's industry, size or region. Every answer comes from your own published proof and links to its source.\n\nBuilt for sales, marketing and customer success teams preparing reference calls, sales decks, RFP answers and new case studies.\n\nLimitations: Rallybird is read-only and cannot change or delete anything. It covers only the proof Rallybird has crawled from your website, plus firmographic estimates (industry, region, headcount). It has no access to CRM, pipeline or contact-list data. Requires a Rallybird account.",
     "developerName": "Rallybird",
-    "category": "Productivity",
+    "category": "Business & Operations",
     "capabilities": [
       "Read"
     ],
