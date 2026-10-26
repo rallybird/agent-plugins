@@ -8,9 +8,9 @@ description: Pull verbatim customer quotes from Rallybird for a topic, each with
 # Pulling quotes
 
 1. Search find_proof with content_type="quotes". Put the topic in the query and
-   any profile in filters (customer_ids from find_companies, or
-   firmographic_industries, speaker_roles, sentiment) in the same call. A named
-   customer goes in customer_ids, not the query.
+   any profile in filters (customer_ids from find_companies, or industry,
+   concepts, speaker_roles, sentiment) in the same call. A named customer goes
+   in customer_ids, not the query.
 2. If that comes back thin, drop the topic, list the profile's quotes, and pick
    the best match yourself. When the answer is one example per company, list
    without a query and pass per_customer_limit=1.

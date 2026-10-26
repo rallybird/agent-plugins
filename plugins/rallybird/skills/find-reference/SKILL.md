@@ -13,8 +13,8 @@ candidates before judging them.
 1. Split the request into the buyer's profile (industry, region, size) and their
    concern (reliability, SSO, a specific SDK). A request with no buyer, such as
    "who can I speak to about SSO?", has only a concern.
-2. Find the profile with find_companies and its firmographic facets, or the same
-   firmographic filters on find_proof. Then search find_proof for the concern
+2. Find the profile with find_companies (industry and its firmographic facets),
+   or the same filters on find_proof. Then search find_proof for the concern
    within those customers, plus a variant or two. Issue independent calls
    together.
 3. Find the people. Search find_proof with content_type="quotes" for the
