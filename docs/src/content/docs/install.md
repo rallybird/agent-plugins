@@ -1,10 +1,10 @@
 ---
 title: Install
-description: Install the Rallybird plugin in Claude or Codex.
+description: Install the Rallybird plugin in Claude or ChatGPT.
 ---
 
 The first time you use Rallybird, your app opens a browser tab so you can sign
-in and choose a workspace. There is no API key to copy.
+in and choose a workspace.
 
 ## Claude desktop app
 
@@ -14,11 +14,7 @@ in and choose a workspace. There is no API key to copy.
    choose **Add plugins**.
 3. Select Rallybird and pick where to install it.
 
-Or download
-[rallybird-claude.zip](https://github.com/rallybird/agent-plugins/releases/latest/download/rallybird-claude.zip)
-and choose **+ Add → Upload plugin**. Uploaded plugins don't update themselves.
-
-## Codex desktop app
+## ChatGPT desktop app
 
 1. Open **Settings → Plugins**, choose **+ Add More...** and enter
    `https://github.com/rallybird/agent-plugins.git`.
