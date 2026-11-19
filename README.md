@@ -41,7 +41,7 @@ first time you use it.
 ## Install the plugin
 
 Pick the app you use. The first time you use Rallybird, your app opens a browser
-tab so you can sign in and choose a workspace. There is no API key to copy.
+tab so you can sign in and choose a workspace.
 
 ### Claude desktop app
 
@@ -51,13 +51,7 @@ tab so you can sign in and choose a workspace. There is no API key to copy.
    choose **Add plugins** (or **Plugins**, then **Browse plugins**).
 3. Select Rallybird and pick where to install it.
 
-Or upload the plugin directly: download
-[rallybird-claude.zip](https://github.com/rallybird/agent-plugins/releases/latest/download/rallybird-claude.zip),
-open **Settings → Plugins**, choose **+ Add → Upload plugin** and select the
-file. Uploaded plugins don't update themselves; download the latest zip to
-upgrade.
-
-### Codex desktop app
+### ChatGPT desktop app
 
 1. Open **Settings → Plugins**, choose **+ Add More...** and enter
    `https://github.com/rallybird/agent-plugins.git`.
